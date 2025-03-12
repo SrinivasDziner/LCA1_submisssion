@@ -1,0 +1,85 @@
+header{
+ background-color: rgba(0, 255, 221, 0.477);
+  text-align: center;
+padding:5px;
+}
+
+li{
+  display:inline;
+  padding:10px;
+}
+nav{
+  text-align: center;
+  float: center;
+  background-color: rgb(205, 205, 205);
+  display: flex;
+
+}
+aside{
+  text-align: center;
+  background-color: bisque;
+  width: 150px;
+ border:1px solid black;
+
+}
+
+.search{
+width:100px;
+position:fixed;
+right: 0; /* Positions the element to the right */
+top: 50px; /* Adjust as needed */
+}
+  
+body {
+    background-color: aliceblue;
+    background-attachment: fixed;
+    background-position: top right;
+    background-repeat: no repeat;
+}
+
+h1 {
+    color: rgb(166, 80, 182);
+}
+
+.multi-column {
+    columns: 3; /* Number of columns */
+    column-gap: 5px; /* Space between columns */
+    column-rule: 1px solid #161616; /* Line between columns */
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+li a {
+  display: inline;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+footer{
+  background-color: black;
+  padding:5px;
+  color:aliceblue
+}
+
+button{
+  color:#ffffff;
+  background-color: #161616;
+  text-transform: uppercase;
+  border-radius: 20%;
+}
+table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background-color: #f4a261;
+  color: white;
+}

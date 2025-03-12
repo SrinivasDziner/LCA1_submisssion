@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Wayfair.css">
+  <title>Wayfair Navbar</title>
+  <link rel="icon" type="image/x-icon" href="DP work.png">
+</head>
+<body> 
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Furnit.</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">SHOP</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">OFFERS</a></li>
+        <li><a href="#">WAYFAIR REWARDS</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="#" class="icon account-icon">👤</a>
+        <a href="#" class="icon cart-icon">🛒</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <div class="search-container">
+    <form action="#">
+      <input type="text" placeholder="Search" class="search-input">
+    </form>
+  </div>
+  
+  <div class="carousel">
+    <div class="carousel-images">
+      <img src="2076086.jpg" alt="Image 1">
+      <img src="Furniture2.jpg" alt="Image 2">
+      <img src="Furniture.jpeg" alt="Image 3">
+    </div>
+    <button class="carousel-btn prev-btn">&#10094;</button>
+    <button class="carousel-btn next-btn">&#10095;</button>
+  </div>
+  
+  <script>
+    const carouselImages = document.querySelector('.carousel-images');
+    const images = document.querySelectorAll('.carousel-images img');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    let currentIndex = 0;
+    let autoSlideInterval;
+
+    // Function to update carousel position
+    function updateCarousel() {
+      const imageWidth = images[0].clientWidth;
+      carouselImages.style.transform = `translateX(${-currentIndex * imageWidth}px)`;
+    }
+
+    // Function to move to the next slide
+    function moveToNextSlide() {
+      currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+      updateCarousel();
+    }
+
+    // Function to move to the previous slide
+    function moveToPrevSlide() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop to the last image
+      updateCarousel();
+    }
+
+    // Event listeners for buttons
+    nextBtn.addEventListener('click', () => {
+      moveToNextSlide();
+      restartAutoSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      moveToPrevSlide();
+      restartAutoSlide();
+    });
+
+    // Function to start the auto-slide
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(moveToNextSlide, 3000); // Change slide every 3 seconds
+    }
+
+    // Function to restart auto-slide when user interacts
+    function restartAutoSlide() {
+      clearInterval(autoSlideInterval); // Stop the current interval
+      startAutoSlide(); // Restart the interval
+    }
+
+    // Automatically resize the carousel on window resize
+    window.addEventListener('resize', updateCarousel);
+
+    // Start the auto-slide when the page loads
+    startAutoSlide();
+  </script>
+  <div background-color="Green">
+
+
+
+</body>
+</html>

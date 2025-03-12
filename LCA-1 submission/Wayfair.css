@@ -1,0 +1,180 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+      background-repeat: no-repeat;
+ background-color: #211713; 
+      background-size: cover; /* Resize the background image to cover the entire container */
+  }
+
+  
+  header {
+    width: 100%;
+    background-color:#3E2C25;
+    position: relative;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+  }
+  
+  .logo h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  .nav-links {  
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #282828;
+  }
+  
+  .nav-icons {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .icon {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .icon:hover {
+    color: #ffd700;
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #90909041;
+    padding:px 30px;
+    border-radius: 200px;
+  }
+  
+  .search-container {
+    display: block;
+    justify-content: left;
+    align-items: left;
+    margin-top: 1px;
+    padding: 5px 500px;
+  }
+  
+  
+  .search-input {
+    width: 500px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    background-color: transparent; /* Makes the background transparent */
+    color: #ffffff; /* Ensures the text color is visible */
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .search-input:focus {
+    border-color: #efefef69; /* Highlight border on focus */
+    background-color: transparent; /* Keeps the background transparent on focus */
+  }
+
+  .search-input::placeholder {
+    color: #ffffff; /* Change the placeholder text color */
+    font-size: 14px; /* Adjust the font size */
+    font-style: bold; /* Make it italic (optional) */
+    opacity: 1; /* Ensures full opacity for better visibility */
+  }
+
+  .carousel {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+
+  /* Carousel images */
+  .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-images img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    flex-shrink: 0;
+
+  }
+
+
+  /* Navigation buttons */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 100%;
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
+
+  table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+th, td {
+    border: 5px solid #08e400;
+    padding: 8px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+th {
+    background-color: #f4f4f4;
+}
+
+.flex-box {
+display: flex;
+}
